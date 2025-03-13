@@ -1,4 +1,5 @@
 import random
+import utils
 
 words = ['rainbow', 'computer', 'science', 'programming',
          'python', 'mathematics', 'player', 'condition',
@@ -12,8 +13,9 @@ words = ['rainbow', 'computer', 'science', 'programming',
 # Select a random word
 word = random.choice(words)
 display_word = ["_"] * len(word)
-chances = 6
+chances = 7
 chances_count = 0
+hangman_stages = utils.hangman_stages
 
 letter_positions = {}
 
@@ -44,6 +46,8 @@ while "_" in display_word and chances_count < chances:
   else:
     chances_count += 1
     print(f"'{user_input_char}' is not in the word")
+    print("chances_count: ", chances_count)
+    print(hangman_stages[chances_count - 1])
 
 print("\nFinal word:", " ".join(display_word))
 if "_" not in display_word:
