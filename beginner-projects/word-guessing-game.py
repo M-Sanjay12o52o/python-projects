@@ -1,9 +1,5 @@
 import random
 
-# name = input("What is your name? ")
-# print(f"Hi, {name}, Welcome to the Word guessing game. Here you need to guess the random word that we have selected for you. With ONE Character at a time.")
-# print(input("Press ENTER to continue."))
-
 words = ['rainbow', 'computer', 'science', 'programming',
          'python', 'mathematics', 'player', 'condition',
          'reverse', 'water', 'board', 'geeks', 'building',
@@ -13,47 +9,49 @@ words = ['rainbow', 'computer', 'science', 'programming',
          'rupee', 'dollar', 'coin', 'circus', 'elephant', 'tiger',
          'lion', 'rambo']
 
+# Select a random word
 # word = random.choice(words)
 word = "banana"
+display_word = ["_"] * len(word)
+chances = 6
+chances_count = 0
 
-print("Word to be guessed:", word)
+letter_positions = {}
 
-number_of_attempts = 12
-count_attempts = 0
-result = []
-copy_word = word
+for index, letter in enumerate(word):
+  if letter in letter_positions:
+    letter_positions[letter].append(index)
+  else:
+    letter_positions[letter] = [index]
 
-for n in range(len(word)):
-      result.append("_")
+revealed_count = {letter: 0 for letter in word}
 
-while count_attempts < 12:
-  attempts_left = number_of_attempts - count_attempts - 1
+print("Initial revealed_count: ", revealed_count)
 
-  if count_attempts == 0:
-    print(f"The word you are trying to guess has {len(word)} characters.")
+while "_" in display_word and chances_count < chances:
+  chances_left = chances - chances_count
+  print(f"Chances left: {chances_left}")
+  print(f"The word you are trying to guess has {len(word)} characters.")
+  print("Current word: ", " ".join(display_word))
 
-  if "_" not in result:
-    print(f"Congrats! You have won the game. In {count_attempts} attempts.")
-    break
+  user_input_char = input(f"Please Enter your Guess Char: ")
 
-  user_input_char = input("Please input your character here: ")
+  if user_input_char in letter_positions:
+    if revealed_count[user_input_char] < len(letter_positions[user_input_char]):
+      print(revealed_count[user_input_char] < len(letter_positions[user_input_char]))
+      pos_to_reveal = letter_positions[user_input_char][revealed_count[user_input_char]]
+      print("pos_to_reveal:", pos_to_reveal)
+      display_word[pos_to_reveal] = user_input_char
+      revealed_count[user_input_char] += 1
+    else:
+      print(f"All occurences of '{user_input_char}' have already been revealed.")
+  else:
+    chances_count += 1
+    print(f"'{user_input_char}' is not in the word")
 
-  if list(dict.fromkeys(word)):
-    print("duplicate char's: ", word) 
-
-  if user_input_char in word and len(user_input_char) == 1: 
-    if type(user_input_char) == int:
-      print("Int input is not valid. Kindly input a character.") 
-    result[word.index(user_input_char)] = user_input_char
-    copy_word.replace(user_input_char, "_")
-    for n in result:
-      print(n)
-  elif len(user_input_char) > 1:
-    print("Characters should only be of length 1.")
-  elif user_input_char not in word:
-    count_attempts += 1
-    print("That particular character is not in the word. Please try again.")
-    print(f"You have {attempts_left} attempts left.")
-
-
-
+print("\nFinal word:", " ".join(display_word))
+if "_" not in display_word:
+  print("Congratulations! You've revealed the whole word.")
+else:
+  print("Game Over! You've run out of chances.")
+  print("The word was:", word)
