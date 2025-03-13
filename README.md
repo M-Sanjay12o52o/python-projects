@@ -1,1 +1,25 @@
 # python-projects
+
+- [x] Number guessing Game
+- [ ] Word guessing Game
+- [ ] Hangman Game
+- [ ] 21 Number game
+- [ ] Rock Paper Scissor
+- [ ] Check if two PDF documents are identital with Python
+- [ ] Convert emoji into text in Python
+- [ ] Create a Voice Recorder using Python
+- [ ] Create s Screen recorder using Python
+- [ ] Mastermind Game using Python
+- [ ] 2048 Game in Python
+- [ ] Flames game in Python
+- [ ] Pokemon Training Game
+- [ ] Taking Screenshots using pyscreeenshot in Python
+- [ ] Desktop Notifier in Python
+- [ ] Get Live Weather Desktop Notifications Using Python
+- [ ] How to use pynput to make a Keylogger?
+- [ ] Python - Cows and Bulls game
+- [ ] Simple Attendance Tracker using Python
+- [ ] Higher - Lower Game with Python
+- [ ] Fun Fact Generator Web App in Python
+- [ ] Creating payment receipts using Python
+- [ ] How To Create a countdown Timer Using Python?
