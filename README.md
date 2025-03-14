@@ -4,7 +4,7 @@
 - [x] Word guessing Game
 - [x] Hangman Game
 - [x] 21 Number game
-- [ ] Rock Paper Scissor
+- [x] Rock Paper Scissor
 - [ ] Check if two PDF documents are identital with Python
 - [ ] Convert emoji into text in Python
 - [ ] Create a Voice Recorder using Python
