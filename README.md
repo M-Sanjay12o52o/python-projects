@@ -1,9 +1,9 @@
 # python-projects
 
 - [x] Number guessing Game
-- [ ] Word guessing Game
-- [ ] Hangman Game
-- [ ] 21 Number game
+- [x] Word guessing Game
+- [x] Hangman Game
+- [x] 21 Number game
 - [ ] Rock Paper Scissor
 - [ ] Check if two PDF documents are identital with Python
 - [ ] Convert emoji into text in Python
