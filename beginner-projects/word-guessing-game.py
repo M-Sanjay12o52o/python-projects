@@ -35,7 +35,6 @@ while "_" in display_word and chances_count < chances:
 
   if user_input_char in letter_positions:
     if revealed_count[user_input_char] < len(letter_positions[user_input_char]):
-      print(revealed_count[user_input_char] < len(letter_positions[user_input_char]))
       pos_to_reveal = letter_positions[user_input_char][revealed_count[user_input_char]]
       display_word[pos_to_reveal] = user_input_char
       revealed_count[user_input_char] += 1

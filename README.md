@@ -9,7 +9,7 @@
 - [x] Convert emoji into text in Python
 - [ ] Create a Voice Recorder using Python
 - [ ] Create s Screen recorder using Python
-- [ ] Mastermind Game using Python
+- [x] Mastermind Game using Python
 - [ ] 2048 Game in Python
 - [ ] Flames game in Python
 - [ ] Pokemon Training Game
