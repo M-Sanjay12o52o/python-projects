@@ -5,8 +5,8 @@
 - [x] Hangman Game
 - [x] 21 Number game
 - [x] Rock Paper Scissor
-- [ ] Check if two PDF documents are identital with Python
-- [ ] Convert emoji into text in Python
+- [x] Check if two PDF documents are identital with Python
+- [x] Convert emoji into text in Python
 - [ ] Create a Voice Recorder using Python
 - [ ] Create s Screen recorder using Python
 - [ ] Mastermind Game using Python
